@@ -25,3 +25,8 @@ INSERT INTO `locales_points_of_interest` (`entry`) SELECT `entry` FROM `points_o
 -- Create the Locales base entries from main table
 INSERT INTO `locales_quest` (`entry`) SELECT `entry` FROM `quest_template` WHERE `entry` NOT IN (SELECT `entry` FROM `locales_quest`);
 
+-- Create the Locales base entries from main table
+INSERT INTO `locales_areatrigger_teleport` (`entry`) SELECT `id` FROM `areatrigger_teleport` WHERE `id` NOT IN (SELECT `entry` FROM `locales_areatrigger_teleport`);
+
+-- Create the Locales base entries from main table
+INSERT INTO `locales_trainer_greeting` (`Entry`) SELECT `Entry` FROM `trainer_greeting` WHERE `Entry` NOT IN (SELECT `Entry` FROM `locales_trainer_greeting`);
